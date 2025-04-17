@@ -54,22 +54,6 @@ An microcontroller-compatible C++ library for interfacing with the Ozone Sensor.
 ### Basic Example
 
 ```c++
-/*!
- * @file  ReadOzoneData.ino
- * @brief Reads ozone concentration in parts per billion (PPB).
- * 
- * @n Steps:
- * - Determine the I2C device address. Use the DIP switches A0 and A1:
- *     ADDRESS_0 → [0 0], ADDRESS_1 → [1 0], ADDRESS_2 → [0 1], ADDRESS_3 → [1 1]
- * - Set the measurement mode: active or passive.
- * - Begin reading the ozone concentration data.
- *
- * @note The ozone sensor needs approximately 3 minutes to stabilize before readings become reliable.
- *
- * @n This sketch prints the ozone concentration value to the serial monitor in PPB.
- * @n Since the sensor readings are typically below 10000, returned values will generally be within that range.
- */
-
 #include "OzoneSensor.h"
 
 #define COLLECT_NUMBER   120             // Number of samples to collect for averaging (recommended: 1–100)
